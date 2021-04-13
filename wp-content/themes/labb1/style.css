@@ -515,17 +515,38 @@ article .meta {
 		padding: 0;
 	}
 
-		#footer .social > li {
+		#footer .social > div > ul > li {
 			list-style: none;
 			margin-bottom: 5px;
 		}
-
-			#footer .social > li > .fa {
-				margin-right: 5px;
-				min-width: 20px;
-				text-align: center;
-			}
-
+		#footer .social > div > ul > .facebook:before {
+			content: "\f09a"; 
+			font-family: FontAwesome;
+			display: inline-block;
+			margin-left: -1.3em; 
+			width: 1.3em; 
+		  }
+		#footer .social > div > ul > .twitter:before {
+			content: "\f099"; 
+			font-family: FontAwesome;
+			display: inline-block;
+			margin-left: -1.3em; 
+			width: 1.3em; 
+		  }
+		#footer .social > div > ul > .instagram:before {
+			content: "\f16d"; 
+			font-family: FontAwesome;
+			display: inline-block;
+			margin-left: -1.3em; 
+			width: 1.3em; 
+		  }
+		#footer .social > div > ul > .linkedin:before {
+			content: "\f08c"; 
+			font-family: FontAwesome;
+			display: inline-block;
+			margin-left: -1.3em; 
+			width: 1.3em;
+		  }
 @media ( max-width: 768px ) {
 
 #footer h4 {
