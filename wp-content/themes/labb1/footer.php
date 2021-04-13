@@ -1,5 +1,4 @@
 </main>
-
 <footer id="footer">
     <div class="container">
         <div class="row top">
@@ -27,20 +26,9 @@
                 $footerArray = [
                     'theme_location' => 'footermenu'
                 ];
+                /* visar sociala medier-menyn */
                 wp_nav_menu($footerArray);
                 ?>
-                  <!--   <li>
-                        <i class="fa fa-facebook"></i> <a href="">Facebook</a>
-                    </li>
-                    <li>
-                        <i class="fa fa-twitter"></i> <a href="">Twitter</a>
-                    </li>
-                    <li>
-                        <i class="fa fa-instagram"></i> <a href="">Instagram</a>
-                    </li>
-                    <li>
-                        <i class="fa fa-linkedin"></i> <a href="">LinkedIn</a>
-                    </li> -->
                 </ul>
             </div>
         </div>
@@ -51,11 +39,9 @@
         </div>
     </div>
 </footer>
-
 </div>
-
-
 <?php
+/* används av wordpress för att köra många olika funktioner.. */
 wp_footer();
 ?>
 </body>

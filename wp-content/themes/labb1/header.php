@@ -5,13 +5,13 @@
 	<title>Labb 1</title>
 
     <?php
+	/* Används av wordpress för att köra många olika funktioner.. */
     wp_head();
     ?>
 </head>
 <body>
 
 	<div id="wrap">
-
 		<header id="header">
 			<div class="container">
 				<div class="row">
@@ -56,6 +56,7 @@
 						$mainArray = [
 							'theme_location' => 'mainmenu'
 						];
+						/* visar huvudmenyn */
 						wp_nav_menu($mainArray);
 						?>
 						</ul>
