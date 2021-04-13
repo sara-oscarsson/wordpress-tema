@@ -319,15 +319,17 @@ article .meta {
 
 }
 
-.side-menu {
-	margin: 0;
-	padding: 0;
-}
-
-	.side-menu > li {
+	#menu-sidomeny{
+		margin: 0;
+		padding: 0;
+	}
+	#menu-sidomeny  li{
 		border-bottom: solid 1px #ccc;
 		list-style: none;
 		padding: 10px 0;
+	}
+	#menu-sidomeny  li a{
+		color: crimson;
 	}
 
 .searchform-wrap {
@@ -439,6 +441,17 @@ article .meta {
 
 				#sidebar > ul > li > ul > li {
 					list-style: none;
+				}
+			#sidebar > ul > li > div > ul {
+				margin: 0;
+				padding: 0;
+			}
+
+				#sidebar > ul > li > div > ul > li {
+					list-style: none;
+				}
+				#sidebar > ul > li > div > ul > li a{
+					color: crimson;
 				}
 
 	#sidebar h2 {

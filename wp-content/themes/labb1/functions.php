@@ -21,4 +21,7 @@ function show_my_menus(){
     register_nav_menu('mainmenu', 'Huvudmeny');
     register_nav_menu('footermenu', 'Sociala medier');
     register_nav_menu('sidemenu', 'Sidomeny');
+    register_nav_menu('bloggsidesidor', 'Blogg sidomeny sidor');
+    register_nav_menu('bloggsidearkiv', 'Blogg sidomeny arkiv');
+    register_nav_menu('bloggsidekategorier', 'Blogg sidomeny kategorier');
 }

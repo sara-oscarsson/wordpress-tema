@@ -43,7 +43,13 @@ get_header();
 								<ul role="navigation">
 									<li class="pagenav">
 										<h2>Sidor</h2>
-										<ul>
+										<?php
+										$sidorArray = [
+											'theme_location' => 'bloggsidesidor'
+										];
+										wp_nav_menu($sidorArray);
+										?>
+									<!-- 	<ul>
 											<li class="page_item current_page_item">
 												<a href="">Blogg</a>
 											</li>
@@ -72,26 +78,38 @@ get_header();
 											<li class="page_item">
 												<a href="">Startsida</a>
 											</li>
-										</ul>
+										</ul> -->
 									</li>
 									<li>
 										<h2>Arkiv</h2>
-										<ul>
+										<?php
+										$arkivArray = [
+											'theme_location' => 'bloggsidearkiv'
+										];
+										wp_nav_menu($arkivArray);
+										?>
+										<!-- <ul>
 											<li>
 												<a href="arkiv.html">oktober 2016</a>
 											</li>
-										</ul>
+										</ul> -->
 									</li>
 									<li class="categories">
 										<h2>Kategorier</h2>
-										<ul>
+										<?php
+										$categoryArray = [
+											'theme_location' => 'bloggsidekategorier'
+										];
+										wp_nav_menu($categoryArray);
+										?>
+										<!-- <ul>
 											<li class="cat-item">
 												<a href="">Natur</a> (1)
 											</li>
 											<li class="cat-item">
 												<a href="">Okategoriserade</a> (3)
 											</li>
-										</ul>
+										</ul> -->
 									</li>
 								</ul>
 							</div>
