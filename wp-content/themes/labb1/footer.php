@@ -23,7 +23,13 @@
             <div class="col-xs-12 col-sm-3 col-md-3 col-md-offset-1">
                 <h4>Social media</h4>
                 <ul class="social">
-                    <li>
+                <?php
+                $footerArray = [
+                    'theme_location' => 'footermenu'
+                ];
+                wp_nav_menu($footerArray);
+                ?>
+                  <!--   <li>
                         <i class="fa fa-facebook"></i> <a href="">Facebook</a>
                     </li>
                     <li>
@@ -34,7 +40,7 @@
                     </li>
                     <li>
                         <i class="fa fa-linkedin"></i> <a href="">LinkedIn</a>
-                    </li>
+                    </li> -->
                 </ul>
             </div>
         </div>
