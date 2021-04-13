@@ -14,7 +14,15 @@ get_header();
 						</div>
 						<aside id="secondary" class="col-xs-12 col-md-3 col-md-pull-9">
 							<ul class="side-menu">
-								<li>
+							
+							<?php
+							$sidemenuArrayTwo = [
+								'theme_location' => 'sidemenu'
+							];
+							wp_nav_menu($sidemenuArrayTwo);
+							?>
+							
+						<!-- 		<li>
 									<a href="undersida.html">Undersida</a>
 								</li>
 								<li>
@@ -25,7 +33,7 @@ get_header();
 								</li>
 								<li>
 									<a href="undersida4.html">Undersida 4</a>
-								</li>
+								</li> -->
 							</ul>
 						</aside>
 					</div>
