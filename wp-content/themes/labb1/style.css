@@ -37,7 +37,7 @@ label {
 input[type="text"],
 input[type="email"] {
 	display: block;
-	min-width: 200px;
+	width: 200px !important;
 }
 
 input[type="submit"] {
@@ -45,7 +45,7 @@ input[type="submit"] {
 }
 
 textarea {
-	min-width: 200px;
+	width: 200px !important;
 }
 
 /* Header styles
@@ -319,19 +319,6 @@ article .meta {
 
 }
 
-	#menu-sidomeny{
-		margin: 0;
-		padding: 0;
-	}
-	#menu-sidomeny  li{
-		border-bottom: solid 1px #ccc;
-		list-style: none;
-		padding: 10px 0;
-	}
-	#menu-sidomeny  li a{
-		color: crimson;
-	}
-
 .searchform-wrap {
 	margin-bottom: 30px;
 }
@@ -442,17 +429,6 @@ article .meta {
 				#sidebar > ul > li > ul > li {
 					list-style: none;
 				}
-			#sidebar > ul > li > div > ul {
-				margin: 0;
-				padding: 0;
-			}
-
-				#sidebar > ul > li > div > ul > li {
-					list-style: none;
-				}
-				#sidebar > ul > li > div > ul > li a{
-					color: crimson;
-				}
 
 	#sidebar h2 {
 		font-size: 20px;
@@ -514,39 +490,6 @@ article .meta {
 		margin: 0;
 		padding: 0;
 	}
-
-		#footer .social > div > ul > li {
-			list-style: none;
-			margin-bottom: 5px;
-		}
-		#footer .social > div > ul > .facebook:before {
-			content: "\f09a"; 
-			font-family: FontAwesome;
-			display: inline-block;
-			margin-left: -1.3em; 
-			width: 1.3em; 
-		  }
-		#footer .social > div > ul > .twitter:before {
-			content: "\f099"; 
-			font-family: FontAwesome;
-			display: inline-block;
-			margin-left: -1.3em; 
-			width: 1.3em; 
-		  }
-		#footer .social > div > ul > .instagram:before {
-			content: "\f16d"; 
-			font-family: FontAwesome;
-			display: inline-block;
-			margin-left: -1.3em; 
-			width: 1.3em; 
-		  }
-		#footer .social > div > ul > .linkedin:before {
-			content: "\f08c"; 
-			font-family: FontAwesome;
-			display: inline-block;
-			margin-left: -1.3em; 
-			width: 1.3em;
-		  }
 @media ( max-width: 768px ) {
 
 #footer h4 {

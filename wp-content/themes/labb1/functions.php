@@ -57,11 +57,11 @@ register_sidebar(
 );
 
 
-/* the_excerpt() visar per default 55 ord, detta gör att upp till 10000 ord kan visas 
+/* the_excerpt() visar per default 55 ord, detta gör att upp till 100 ord kan visas 
 använder denna för att jag bara vill hämta texten i inlägget*/
 
 function wpdocs_custom_excerpt_length( $length ) {
-    return 10000;
+    return 1000;
 }
 add_filter( 'excerpt_length', 'wpdocs_custom_excerpt_length', 999 );
 
