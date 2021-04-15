@@ -11,9 +11,19 @@
 							/* loopar igenom en lista med posts */
                             while( have_posts()){
 								/* tar fram en post och tar samtidigt bort den ur listan */
-                                the_post();
-								/* visar innehållet i posten */
-                                the_content();
+                                the_post();  
+							?>
+							<img src="
+							<?php  
+							/* hämtar img-url */
+							the_post_thumbnail_url(); 
+							?>" />
+								<div class="text">
+									<h1><?php the_title(); ?></h1>
+									<?php the_excerpt(); ?>
+								</div>
+
+							<?php 
                             }
                             ?>
 							</div>
