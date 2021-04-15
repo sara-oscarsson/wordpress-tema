@@ -29,13 +29,13 @@ get_header();
 										<i class="fa fa-user"></i> <a href="forfattare.html">Peter Pärmenäs</a>
 									</li>
 									<li>
-										<i class="fa fa-tag"></i> <!-- <a href="kategori.html">Kategori 1</a>, <a href="kategori.html">Kategori 2</a> -->
+										<i class="fa fa-tag"></i> <a href="kategori.html">Kategori 1</a>, <a href="kategori.html">Kategori 2</a>
 										<?php 
 										the_category();
 										?>
 									</li>
 								</ul>
-								<p> <?php the_excerpt();  ?></p>
+								<?php the_excerpt();  ?>
                             <?php
 							/* visar innehållet i posten som loopen är på */
                             /* the_content(); */
@@ -60,9 +60,9 @@ get_header();
 									<li>
 										<form id="searchform" class="searchform">
 											<div>
-												<label class="screen-reader-text">Sök efter:</label>
-												<input type="text" />
-												<input type="submit" value="Sök" />
+											<?php
+											get_search_form();
+											?>
 											</div>
 										</form>
 									</li>
