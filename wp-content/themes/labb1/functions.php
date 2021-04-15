@@ -13,6 +13,7 @@ function css_and_js(){
     wp_enqueue_style('temastil', get_template_directory_uri(). '/style.css');
     wp_enqueue_style('temastil3', get_template_directory_uri(). '/font-awesome.css');
     wp_enqueue_style('temastil2', get_template_directory_uri(). '/bootstrap.css');
+    wp_enqueue_style('temastil4', get_template_directory_uri(). '/new-style.css');
     
     wp_enqueue_script('temascript1', get_template_directory_uri(). '/jquery.js', [], false, true);
     wp_enqueue_script('temascript2', get_template_directory_uri(). '/script.js', [], false, true);
@@ -35,14 +36,23 @@ register_sidebar(
     [
         'name' => 'Footer till vänster',
         'Description' => 'placering footer',
-        'id' => 'footerleft'
+        'id' => 'footerleft',
+        'before_widget' => ' '
     ]
 );
 register_sidebar(
     [
         'name' => 'Footer i mitten',
         'Description' => 'placering2 footer',
-        'id' => 'footermiddle'
+        'id' => 'footermiddle',
+        'before_widget' => ' '
+    ]
+);
+register_sidebar(
+    [
+        'name' => 'Plats för taggar till inägg',
+        'Description' => 'placering taggar inlägg',
+        'id' => 'blogtag'
     ]
 );
 

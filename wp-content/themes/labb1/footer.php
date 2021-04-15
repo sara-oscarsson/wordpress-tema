@@ -26,7 +26,7 @@
                 ?>
             </div>
             <div class="col-xs-12 col-sm-3 col-md-3 col-md-offset-1">
-                <h4>Social media</h4>
+                <h2>Social media</h2>
                 <ul class="social">
                 <?php
                 $footerArray = [
