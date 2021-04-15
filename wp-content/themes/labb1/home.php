@@ -12,12 +12,35 @@ get_header();
                             while( have_posts()){
 								/* tar fram en post och tar bort den ur listan med posts */
                                 the_post();
-                            
                             ?>
 							<article>
+								<img src="<?php  the_post_thumbnail_url(); ?>" alt="">
+								<h2>
+								<?php 
+								/* Hämtar titeln i inlägget */
+								the_title(); 
+								?> 
+								</h2>
+								<ul class="meta">
+									<li>
+										<i class="fa fa-calendar"></i> 1 januari, 2016
+									</li>
+									<li>
+										<i class="fa fa-user"></i> <a href="forfattare.html">Peter Pärmenäs</a>
+									</li>
+									<li>
+										<i class="fa fa-tag"></i> <!-- <a href="kategori.html">Kategori 1</a>, <a href="kategori.html">Kategori 2</a> -->
+										<?php 
+										the_category();
+										?>
+									</li>
+								</ul>
+								<p> <?php the_excerpt();  ?></p>
                             <?php
 							/* visar innehållet i posten som loopen är på */
-                            the_content();
+                            /* the_content(); */
+							
+							
                             ?>
 							</article>
                             <?php
