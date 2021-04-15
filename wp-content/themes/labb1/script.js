@@ -1,6 +1,7 @@
 (function($){
 
 	// Menu icon
+	console.log("hello");
 
 	$('.menu-icon').click(function(){
 		$(this).toggleClass('fa-bars fa-close');

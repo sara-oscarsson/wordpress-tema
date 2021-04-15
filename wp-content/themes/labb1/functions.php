@@ -3,6 +3,8 @@
 add_theme_support('post-thumbnails');
 /* lägger till så att vi kan skapa menyer i admin panelen */
 add_theme_support('menus');
+/* lägg till widget */
+add_theme_support('widgets');
 
 /* länkar till css and js files */
 add_action('wp_enqueue_scripts', 'css_and_js');
@@ -12,8 +14,8 @@ function css_and_js(){
     wp_enqueue_style('temastil3', get_template_directory_uri(). '/font-awesome.css');
     wp_enqueue_style('temastil2', get_template_directory_uri(). '/bootstrap.css');
     
-    wp_enqueue_script('temascript', get_template_directory_uri(). '/jquery.js', [], false, true);
-    wp_enqueue_script('temascript', get_template_directory_uri(). '/script.js', [], false, true);
+    wp_enqueue_script('temascript1', get_template_directory_uri(). '/jquery.js', [], false, true);
+    wp_enqueue_script('temascript2', get_template_directory_uri(). '/script.js', [], false, true);
 
 }
 /* funktion för att kunna placera menyerna där du vill ha dem */
@@ -27,4 +29,33 @@ function show_my_menus(){
     register_nav_menu('bloggsidearkiv', 'Blogg sidomeny arkiv');
     register_nav_menu('bloggsidekategorier', 'Blogg sidomeny kategorier');
 }
+
+/* skapar område att placera widgets på */
+register_sidebar(
+    [
+        'name' => 'Footer till vänster',
+        'Description' => 'placering footer',
+        'id' => 'footerleft'
+    ]
+);
+register_sidebar(
+    [
+        'name' => 'Footer i mitten',
+        'Description' => 'placering2 footer',
+        'id' => 'footermiddle'
+    ]
+);
+
+
+/* the_excerpt() visar per default 55 ord, detta gör att upp till 10000 ord kan visas */
+
+function wpdocs_custom_excerpt_length( $length ) {
+    return 10000;
+}
+add_filter( 'excerpt_length', 'wpdocs_custom_excerpt_length', 999 );
+
+
+
+
+
 ?>
