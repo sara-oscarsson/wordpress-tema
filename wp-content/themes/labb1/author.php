@@ -6,7 +6,7 @@ get_header();
 				<div class="container">
 					<div class="row">
 						<div id="primary" class="col-xs-12 col-md-9">
-							<h1>Blogg</h1>
+							<h1>Author</h1>
                             <?php
 							/* loopar igenom alla posts */
                             while( have_posts()){
@@ -15,18 +15,14 @@ get_header();
                             ?>
 							<article>
 								<img src="
-								<?php 
-								/* img url */ 
-								the_post_thumbnail_url(); 
-								?>" alt="">
+                                <?php 
+                                /* visar bilden i post */ 
+                                the_post_thumbnail_url(); 
+                                ?>" alt="">
 								<h2>
-									<a id="titlePost" href="
-									<?php  
-									/* url till inlägget */
-									the_permalink_rss(); 
-									?>">
+									<a id="titlePost" href="<?php  the_permalink_rss(); ?>">
 									<?php 
-									/* Hämtar titeln i inlägget */
+									/* visar titeln i inlägget */
 									the_title(); 
 									
 									?> 
@@ -35,34 +31,22 @@ get_header();
 								</h2>
 								<ul class="meta">
 									<li>
-									<i class="fa fa-calendar"></i>
-									<?php  
-									/* visar datum som inlägget skrevs */
-									the_date();  
-									?>
+									<i class="fa fa-calendar"></i><?php  the_date();  ?>
 									</li>
 									<li>
-									<i class="fa fa-user"></i>
-									<?php 
-									/* länk till author sidan */ 
-									the_author_posts_link();  
-									?>
+									<i class="fa fa-user"></i><?php  the_author_posts_link();  ?>
 									</li>
 									<li>
-									<i class="fa fa-tag"></i>
-									<?php  
-									/* visar kategorier, med parametern wrappar jag den i en a tagg */
-									the_category('<a>, ');  
-									?>
+									<i class="fa fa-tag"></i><?php  the_category('<a>, ');  ?>
 									</li>
 								</ul>
-								<?php
-								/* visar texten */
-								 the_excerpt();  
-								 ?>
+								<?php 
+                                /* visar texten i post */
+                                the_excerpt();  
+                                ?>
 							</article>
                             <?php
-							/* avslutar loopen */
+                            /* här avslutar vi loopen */
                             }
                             ?>
 							<nav class="navigation pagination">
@@ -80,6 +64,7 @@ get_header();
 										<form id="searchform" class="searchform">
 											<div>
 											<?php
+                                            /*  här visar vi en sök ruta så att man kan söka på sidan */
 											get_search_form();
 											?>
 											</div>

@@ -3,7 +3,6 @@
 <head>
 	<meta charset="UTF-8" />
 	<title>Labb 1</title>
-
     <?php
 	/* Används av wordpress för att köra många olika funktioner.. */
     wp_head();
@@ -22,6 +21,7 @@
 						<form id="searchform" class="searchform">
 							<div>
 								<?php
+								/* visar ett sökfält så att an kan söka på sidan */
 								get_search_form();
 								?>
 							</div>
@@ -64,5 +64,4 @@
 				</div>
 			</div>
 		</nav>
-
 		<main>

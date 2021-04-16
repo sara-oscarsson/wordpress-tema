@@ -3,32 +3,30 @@
     <div class="container">
         <div class="row top">
             <div class="col-xs-12 col-sm-6 col-md-4">
-                <!-- <h4>Kort om oss</h4>
-                <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed sed sodales mauris. Aliquam felis est, efficitur vel fringilla quis, vehicula quis ex.</p>
-                <p>Phasellus tristique nunc in leo faucibus, a consequat nulla sagittis.</p> -->
                 <?php
                 dynamic_sidebar('footerleft');
                 ?>
             </div>
             <div class="col-xs-12 col-sm-3 col-md-3 col-md-offset-1">
-               <!--  <h4>Kontaktuppgifter</h4>
-                <p>
-                    The Company<br />
-                    Gatgatan 1<br />
-                    123 45 Någonstans
-                </p>
-                <p>
-                    Tel: 0123456789<br />
-                    E-post: <a href="">info@thecompany.com</a>
-                </p> -->
                 <?php
                  dynamic_sidebar('footermiddle');   
                 ?>
             </div>
             <div class="col-xs-12 col-sm-3 col-md-3 col-md-offset-1">
-                <h2>Social media</h2>
+            <?php 
+            /* hämtar menyns metadata*/
+            $menuData = wp_get_nav_menu_object("Sociala medier" );
+            
+            ?>
+                <h2>
+                <?php
+                /* ovan retunerar ett objekt, här hämtar vi ut namnet på menyn */
+                echo $menuData->name;
+                ?>
+                </h2>
                 <ul class="social">
                 <?php
+                /* wp_nav_menu tar in en array */
                 $footerArray = [
                     'theme_location' => 'footermenu'
                 ];

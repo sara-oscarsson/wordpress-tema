@@ -75,11 +75,6 @@ get_header();
 										/* visar arkiv-menyn */
 										wp_nav_menu($arkivArray);
 										?>
-										<!-- <ul>
-											<li>
-												<a href="arkiv.html">oktober 2016</a>
-											</li>
-										</ul> -->
 									</li>
 									<li class="categories">
 										<h2>Kategorier</h2>

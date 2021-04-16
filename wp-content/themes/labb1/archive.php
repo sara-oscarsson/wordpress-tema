@@ -16,7 +16,11 @@ get_header();
 							<article>
 								<img src="<?php  the_post_thumbnail_url(); ?>" alt="">
 								<h2>
-									<a href="<?php  the_permalink_rss(); ?>">
+									<a id="titlePost" href="
+									<?php
+									/* länkar till postens url */  
+									the_permalink_rss(); 
+									?>">
 									<?php 
 									/* Hämtar titeln i inlägget */
 									the_title(); 
@@ -30,15 +34,19 @@ get_header();
 									<i class="fa fa-calendar"></i><?php  the_date();  ?>
 									</li>
 									<li>
-									<i class="fa fa-user"></i><?php  the_author();  ?>
+									<i class="fa fa-user"></i><?php  the_author_posts_link();  ?>
 									</li>
 									<li>
 									<i class="fa fa-tag"></i><?php  the_category('<a>, ');  ?>
 									</li>
 								</ul>
-								<?php the_excerpt();  ?>
+								<?php 
+								/* tar fram en del av texten */
+								the_excerpt();  
+								?>
 							</article>
                             <?php
+							/* här avslutar jag loopen */
                             }
                             ?>
 						</div>
@@ -49,6 +57,7 @@ get_header();
 										<form id="searchform" class="searchform">
 											<div>
 											<?php
+											/* visar en sök ruta så du kan söka på sidan */
 											get_search_form();
 											?>
 											</div>
@@ -75,11 +84,6 @@ get_header();
 										/* visar arkiv-menyn */
 										wp_nav_menu($arkivArray);
 										?>
-										<!-- <ul>
-											<li>
-												<a href="arkiv.html">oktober 2016</a>
-											</li>
-										</ul> -->
 									</li>
 									<li class="categories">
 										<h2>Kategorier</h2>

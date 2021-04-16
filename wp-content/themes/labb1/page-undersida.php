@@ -10,8 +10,6 @@
                             the_post();
                             the_content();
                         }
-
-
                         ?>
 						</div>
 						<aside id="secondary" class="col-xs-12 col-md-3">
